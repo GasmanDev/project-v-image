@@ -11,9 +11,9 @@ How to use the script: https://youtu.be/6ICVsi2pWyk
 Configure following paramers before running the script
 --------------------------------------------------------------------------------------*/
 //Place all images needs to be processed in a folder. Add the path below.
-var sourceFolder = Folder("D:\\gta5\\cloth-image\\male_kevlar_cropped");
+var sourceFolder = Folder("D:\\gta5\\cloth-image\\male_pant_cropped");
 //Add the path of an existing folder below to save the output.
-var saveFolder = new Folder("D:\\gta5\\cloth-image\\male_kevlar_trans");
+var saveFolder = new Folder("D:\\gta5\\cloth-image\\male_pant_trans");
 //Fill color of the background
 var colorRef = new SolidColor;
 colorRef.rgb.red = 255;
