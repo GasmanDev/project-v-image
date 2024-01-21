@@ -11,9 +11,9 @@ How to use the script: https://youtu.be/6ICVsi2pWyk
 Configure following paramers before running the script
 --------------------------------------------------------------------------------------*/
 //Place all images needs to be processed in a folder. Add the path below.
-var sourceFolder = Folder("D:\\gta5\\cloth-image\\female_mask_cropped");
+var sourceFolder = Folder("D:\\FiveM\\clothes_images\\male_shoes\\cropped");
 //Add the path of an existing folder below to save the output.
-var saveFolder = new Folder("D:\\gta5\\cloth-image\\female_mask_trans");
+var saveFolder = new Folder("D:\\FiveM\\clothes_images\\male_shoes\\transparent");
 //Fill color of the background
 var colorRef = new SolidColor;
 colorRef.rgb.red = 255;
@@ -98,6 +98,8 @@ for(var a = 0 ;a < fileList.length; a++){
 	//Create the file name
 	var fileName = app.activeDocument.name.replace(/\.[^\.]+$/, ''); 
 	pngSaveOptions = new PNGSaveOptions();
+	pngSaveOptions.transparency = true
+	pngSaveOptions.compression = 9
 	//Edit png options here.
 	//Save image as PNG
 	app.activeDocument.saveAs(new File(saveFolder +'/'+ fileName + '.png'), pngSaveOptions, true, Extension.LOWERCASE);
